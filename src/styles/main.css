@@ -1,0 +1,351 @@
+/* === GLOBAL RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #222;
+}
+
+/* === COLOR THEME === */
+:root {
+  --primary-color: #7e1f1f;
+  --primary-hover: #5c1717;
+  --text-color: #222222;
+  --light-bg: #f9f9f9;
+  --gray-text: #555;
+}
+
+/* === UTILITIES === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+/* === Address === */
+.Address {
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+  padding: 10px 0;
+}
+.Address ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+}
+
+.Address ul li a {
+  color: var(--light-bg);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Address ul li a:hover {
+  text-decoration: underline;
+}
+/*=== Hrr === */
+.Hrr {
+  border-color: var(--primary-color);
+}
+/*=== LOGO === */
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 150px;
+}
+.Logo ul {
+  color: var(--primary-color);
+  padding-left: 100px;
+  display: flex;
+  justify-content: left;
+  list-style: none;
+}
+.logo {
+  padding-right: 400px;
+}
+.pp {
+  padding-top: 20px;
+  padding-right: 200px;
+  font-size: small;
+}
+
+
+
+.appointment-btn {
+  background-color: #600000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 300px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  border-radius: 6px;
+}
+
+.dropdown-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.dropdown-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.dropdown-link {
+  color: #880e4f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dropdown-text {
+  margin: 2px 0;
+  font-size: 12px;
+  color: #444;
+}
+
+.dropdown-button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  background-color: #880e4f;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+/* === HERO SECTION === */
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+}
+.hero-quote {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 1;
+  background: none;
+  padding: 0 10vw;
+}
+.hero-quote-line1 {
+  font-family: Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.hero-quote-line2 {
+  color: var(--primary-color);
+  font-size: 6.2rem;
+  font-weight: 700;
+}
+.hero-quote-line3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+.slider-arrow.left {
+  left: 16px;
+}
+.slider-arrow.right {
+  right: 16px;
+}
+.hero-slider:hover .slider-arrow {
+  opacity: 1;
+}
+
+/* === SERVICES ICON SECTION === */
+.services-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: var(--light-bg);
+}
+
+.services-icons div {
+  text-align: center;
+  max-width: 200px;
+}
+
+.services-icons i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* === APPOINTMENT FORM === */
+.appointment-form {
+  background-color: var(--light-bg);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.appointment-form button {
+  width: 100%;
+}
+
+/* === TESTIMONIALS === */
+.testimonials {
+  background-color: #f2f2f2;
+  padding: 40px 20px;
+}
+
+.testimonials .card {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* === BLOG SECTION === */
+.blogs {
+  padding: 40px 20px;
+}
+
+.blogs .blog-post {
+  margin-bottom: 20px;
+}
+
+.blogs .blog-post h4 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.blogs .blog-post p {
+  color: var(--gray-text);
+  font-size: 0.9rem;
+}
+
+/* === MAP === */
+.map-section iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+}
