@@ -17,7 +17,7 @@ const AppointmentCard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/send-appointment", formData);
+      await axios.post("https://pack1.onrender.com/send-appointment", formData);
       alert("Appointment request sent!");
       setFormData({ name: '', email: '', phone: '', date: '', message: '' });
     } catch (err) {
